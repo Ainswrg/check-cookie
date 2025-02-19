@@ -47,7 +47,8 @@
     if (id) {
         var expires = getExpirationDate(DEFAULT_TIME_TO_LIVE);
         var options = {
-            expires: expires
+            expires: expires,
+            "SameSite": "None"
         };
         setForAllSubdomains(STORAGE_KEY, id, options);
     }
